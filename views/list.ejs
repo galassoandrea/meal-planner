@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meal Planner</title>
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
@@ -23,13 +23,21 @@
 <body>
     <div class="container">
         <div class="card lunch-card">
-            <form action="/" method="post">
+
+            <!-- Form used to delete an item  -->
+            <form action="/delete" method="post">
                 <h2 class="card-title">Lunch</h2>
-                <ul class="card-items">
-                    <% for(let i = 0; i < lunchList.length; i++) { %>
-                        <li><%= lunchList[i] %></li>
-                    <% } %>
-                </ul>
+                <% for(let i = 0; i < lunchList.length; i++) { %>
+                <div class="card-items">
+                    <input type="checkbox" name="checkbox" value="<%= i %>" onchange="this.form.submit()">
+                    <p class="item"><%= lunchList[i] %></p>
+                </div>
+                <% } %>
+                <input type="hidden" name="list" value="lunch">
+            </form>
+
+            <!-- Form used to add a new item  -->
+            <form action="/" method="post">
                 <div class="input-container">
                     <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
                     <button class="item-submit" name="list" value="lunch" type="submit"><i
@@ -39,13 +47,21 @@
         </div>
         <div class="card-group">
             <div class="card breakfast-card">
-                <form action="/" method="post">
+
+                <!-- Form used to delete an item  -->
+                <form action="/delete" method="post">
                     <h2 class="card-title">Breakfast</h2>
-                    <ul class="card-items">
-                        <% for(let i = 0; i < breakfastList.length; i++) { %>
-                            <li><%= breakfastList[i] %></li>
-                        <% } %>
-                    </ul>
+                    <% for(let i = 0; i < breakfastList.length; i++) { %>
+                    <div class="card-items">
+                        <input type="checkbox" name="checkbox" value="<%= i %>" onchange="this.form.submit()">
+                        <p class="item"><%= breakfastList[i] %></p>
+                    </div>
+                    <% } %>
+                    <input type="hidden" name="list" value="breakfast">
+                </form>
+
+                <!-- Form used to add a new item  -->
+                <form action="/" method="post">
                     <div class="input-container">
                         <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
                         <button class="item-submit" name="list" value="breakfast" type="submit"><i
@@ -54,13 +70,21 @@
                 </form>
             </div>
             <div class="card snack-card">
-                <form action="/" method="post">
+
+                <!-- Form used to delete an item  -->
+                <form action="/delete" method="post">
                     <h2 class="card-title">Snack</h2>
-                    <ul class="card-items">
-                        <% for(let i = 0; i < snackList.length; i++) { %>
-                            <li><%= snackList[i] %></li>
-                        <% } %>
-                    </ul>
+                    <% for(let i = 0; i < snackList.length; i++) { %>
+                    <div class="card-items">
+                        <input type="checkbox" name="checkbox" value="<%= i %>" onchange="this.form.submit()">
+                        <p class="item"><%= snackList[i] %></p>
+                    </div>
+                    <% } %>
+                    <input type="hidden" name="list" value="snack">
+                </form>
+
+                <!-- Form used to add a new item  -->
+                <form action="/" method="post">
                     <div class="input-container">
                         <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
                         <button class="item-submit" name="list" value="snack" type="submit"><i
@@ -70,13 +94,21 @@
             </div>
         </div>
         <div class="card dinner-card">
-            <form action="/" method="post">
+
+            <!-- Form used to delete an item  -->
+            <form action="/delete" method="post">
                 <h2 class="card-title">Dinner</h2>
-                <ul class="card-items">
-                    <% for(let i = 0; i < dinnerList.length; i++) { %>
-                        <li><%= dinnerList[i] %></li>
-                    <% } %>
-                </ul>
+                <% for(let i = 0; i < dinnerList.length; i++) { %>
+                <div class="card-items">
+                    <input type="checkbox" name="checkbox" value="<%= i %>" onchange="this.form.submit()">
+                    <p class="item"><%= dinnerList[i] %></p>
+                </div>
+                <% } %>
+                <input type="hidden" name="list" value="dinner">
+            </form>
+
+            <!-- Form used to add a new item  -->
+            <form action="/" method="post">
                 <div class="input-container">
                     <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
                     <button class="item-submit" name="list" value="dinner" type="submit"><i

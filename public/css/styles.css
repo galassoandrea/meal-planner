@@ -41,9 +41,14 @@ body {
     font-size: 1.3rem;
 }
 
+.item {
+    display: inline;
+}
+
 .input-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .item-input {
