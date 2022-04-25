@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4da8dbf234.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card lunch-card">
+            <form action="/" method="post">
+                <h2 class="card-title">Lunch</h2>
+                <ul class="card-items">
+                    <% for(let i = 0; i < lunchList.length; i++) { %>
+                        <li><%= lunchList[i] %></li>
+                    <% } %>
+                </ul>
+                <div class="input-container">
+                    <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
+                    <button class="item-submit" name="list" value="lunch" type="submit"><i
+                            class="fa-solid fa-circle-plus fa-3x"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="card-group">
+            <div class="card breakfast-card">
+                <form action="/" method="post">
+                    <h2 class="card-title">Breakfast</h2>
+                    <ul class="card-items">
+                        <% for(let i = 0; i < breakfastList.length; i++) { %>
+                            <li><%= breakfastList[i] %></li>
+                        <% } %>
+                    </ul>
+                    <div class="input-container">
+                        <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
+                        <button class="item-submit" name="list" value="breakfast" type="submit"><i
+                                class="fa-solid fa-circle-plus fa-3x"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="card snack-card">
+                <form action="/" method="post">
+                    <h2 class="card-title">Snack</h2>
+                    <ul class="card-items">
+                        <% for(let i = 0; i < snackList.length; i++) { %>
+                            <li><%= snackList[i] %></li>
+                        <% } %>
+                    </ul>
+                    <div class="input-container">
+                        <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
+                        <button class="item-submit" name="list" value="snack" type="submit"><i
+                                class="fa-solid fa-circle-plus fa-3x"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card dinner-card">
+            <form action="/" method="post">
+                <h2 class="card-title">Dinner</h2>
+                <ul class="card-items">
+                    <% for(let i = 0; i < dinnerList.length; i++) { %>
+                        <li><%= dinnerList[i] %></li>
+                    <% } %>
+                </ul>
+                <div class="input-container">
+                    <input class="item-input" type="text" name="item" id="" placeholder="Add some food">
+                    <button class="item-submit" name="list" value="dinner" type="submit"><i
+                            class="fa-solid fa-circle-plus fa-3x"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

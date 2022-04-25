@@ -1,0 +1,92 @@
+body {
+    font-family: 'Andika New Basic', sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 320px;
+    border: 3px solid black;
+    margin: 20px 10px;
+    padding: 0 20px 20px;
+    border-radius: 15px;
+}
+
+.breakfast-card {
+    background-color: #A7E9AF;
+}
+
+.lunch-card {
+    background-color: #BEEBE9;
+}
+
+.dinner-card {
+    background-color: #FFE3ED;
+}
+
+.snack-card {
+    background-color: #EEF9BF;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-items {
+    font-size: 1.3rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-input {
+    border: none;
+    background-color: inherit;
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.item-input:focus {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.item-submit {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1170px) {
+    .card {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 320px;
+    }
+
+    .breakfast-card {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .card {
+        width: 260px;
+    }
+}
