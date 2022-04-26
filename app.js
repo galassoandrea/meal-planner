@@ -28,7 +28,7 @@ app.post("/", function (req, res) {
     const targetList = req.body.list;
 
     if (itemToAdd !== null && itemToAdd !== "") {
-        
+
         /* Detecting to which list the element should be added */
         switch (targetList) {
             case "lunch":
@@ -76,6 +76,11 @@ app.post("/delete", function (req, res) {
     }
 });
 
-app.listen(3000, function () {
-    console.log("Server running on port 3000");
+let port = process.env.PORT;
+if(port == "" || port == null) {
+    port = 3000;
+}
+
+app.listen(port, function () {
+    console.log("Server is running!");
 });
