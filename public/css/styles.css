@@ -2,6 +2,14 @@ body {
     font-family: 'Andika New Basic', sans-serif;
 }
 
+i:hover {
+    color: #495057;
+}
+
+i:active {
+    color: #343a40;
+}
+
 .container {
     display: flex;
     margin: auto;

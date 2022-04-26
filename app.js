@@ -27,29 +27,31 @@ app.post("/", function (req, res) {
     const itemToAdd = req.body.item;
     const targetList = req.body.list;
 
-    /* Detecting to which list the element should be added */
-
-    switch (targetList) {
-        case "lunch":
-            lunchStartingContent.push(itemToAdd);
-            res.redirect("/");
-            break;
-        case "breakfast":
-            breakfastStartingContent.push(itemToAdd);
-            res.redirect("/");
-            break;
-        case "snack":
-            snackStartingContent.push(itemToAdd);
-            res.redirect("/");
-            break;
-        case "dinner":
-            dinnerStartingContent.push(itemToAdd);
-            res.redirect("/");
-            break;
+    if (itemToAdd !== null && itemToAdd !== "") {
+        
+        /* Detecting to which list the element should be added */
+        switch (targetList) {
+            case "lunch":
+                lunchStartingContent.push(itemToAdd);
+                res.redirect("/");
+                break;
+            case "breakfast":
+                breakfastStartingContent.push(itemToAdd);
+                res.redirect("/");
+                break;
+            case "snack":
+                snackStartingContent.push(itemToAdd);
+                res.redirect("/");
+                break;
+            case "dinner":
+                dinnerStartingContent.push(itemToAdd);
+                res.redirect("/");
+                break;
+        }
     }
 });
 
-app.post("/delete", function(req, res) {
+app.post("/delete", function (req, res) {
     const itemToDelete = req.body.checkbox;
     const targetList = req.body.list;
 
